@@ -1,0 +1,217 @@
+body {
+  background-image: url(../img/fond.png);
+}
+
+/* -------------------- */
+/*FILTER SECTION */
+/* -------------------- */
+.section__recipe-book {
+  padding: 0 1rem 0 1rem;
+}
+/*============ DISH CATEGORY========*/
+.dish__category-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--font-title);
+  color: var(--red-dark);
+}
+
+.dish__category-filter {
+  background-color: var(--beige-light);
+  text-align: center;
+  padding: 1rem;
+  border-radius: 15px;
+}
+.icon__dish {
+  font-size: 8rem;
+}
+
+/*============ FILM CONTAINER ========*/
+.container__film-filter {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.select__category {
+  text-align: center;
+  color: white;
+  background-color: var(--blue-dark);
+  border: none;
+  border-radius: 2px;
+  font-size: var(--fs-small-size);
+  width: 80%;
+  height: 2em;
+  margin-bottom: 2rem;
+}
+/*=================SWIPER==========*/
+.film__swiper {
+  display: block;
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+}
+/*other container for desktop mode*/
+.film__cards-container {
+  display: none;
+}
+.film__cards {
+  text-align: center;
+}
+.film__card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.film__card img {
+  max-height: 250px;
+  height: auto;
+  object-fit: cover;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  top: 150%;
+  transform: translateY(-100%);
+  color: var(--orange) !important;
+  font-size: 0.5rem;
+}
+.swiper-slide {
+  width: auto !important;
+}
+
+.button__see-more {
+  padding: 0.8rem;
+  font-size: var(--fs-small-size);
+  background-color: var(--blue-dark);
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button__see-more:hover {
+  background-color: var(--orange);
+  transform: translateY(-2px);
+}
+.see-more-slide {
+  padding: 3rem 0;
+}
+
+/*===========BUTTON CREATE YOUR RECIPE=======*/
+
+.add-recipe-btn {
+  display: block;
+  margin: 2rem auto;
+  font-size: var(--fs-normal-size);
+  background-color: var(--red-dark);
+  color: white;
+  padding: 1rem;
+  border: 2px solid var(--blue-dark);
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* -------------------- */
+/* RECIPE OF TH DAY SECTION */
+/* -------------------- */
+
+.section__today-recipe {
+  position: relative;
+  border-top: 5px solid var(--red-dark);
+  margin-top: 4rem;
+  padding: 1rem;
+}
+.section__today-recipe-title {
+  position: absolute;
+  top: -25px;
+  left: 0;
+  display: inline;
+  background-color: var(--red-dark);
+  padding: 1rem;
+  border-radius: 15px;
+  color: white;
+}
+
+/* -------------------- */
+/*TABLET */
+/* -------------------- */
+@media (min-width: 768px) {
+  .select__category {
+    max-width: 150px;
+  }
+  .film__card img {
+    max-height: 250px;
+  }
+}
+
+/* -------------------- */
+/*DESKTOP */
+/* -------------------- */
+@media (min-width: 1000px) {
+  .dish__category-filters {
+    margin-bottom: 4rem;
+  }
+  .container__film-filter {
+    width: 80%;
+    margin: auto;
+    text-align: start;
+  }
+
+  /*=================SWIPER IS DISPLAY NONE ON DESKTOP ==========*/
+  .film__swiper {
+    display: none !important;
+  }
+
+  /*========CONTAINER FOR DESKTOP IS DISPLAYED=====*/
+  .film__cards-container {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    margin-right: -4rem;
+  }
+  .film__grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    padding: 2rem 0;
+  }
+
+  .film__card img {
+    max-height: 200px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 0;
+  }
+  .button__see-more {
+    padding: 0.8rem;
+    max-height: 30%;
+    min-width: 10%;
+    margin: auto 1rem;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next,
+  .swiper-pagination {
+    visibility: hidden;
+  }
+
+  .section__today-recipe {
+    padding: 2rem 10rem;
+  }
+}
+/* -------------------- */
+/*DESKTOP BIG SCREENS */
+/* -------------------- */
+@media (min-width: 1200px) {
+  .container__film-filter {
+    width: 60%;
+    gap: 1rem;
+  }
+}

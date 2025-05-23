@@ -1,0 +1,108 @@
+.section__my-profile {
+  padding: 1rem;
+}
+
+.login-form,
+.register-form {
+  max-width: 500px;
+  margin: auto;
+  background-color: var(--beige-light);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-form .field {
+  margin-bottom: 1.5rem;
+}
+
+.login-form .input:focus {
+  outline: none;
+  border-color: var(--red-dark);
+}
+
+.login-form .btn {
+  width: 100%;
+}
+
+#password,
+#confirmPassword {
+  position: relative;
+}
+.eye-icon {
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+}
+
+/*======================= Login oubli de password ==========================*/
+.button__container {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.forgot-password-btn,
+.connexion-btn {
+  margin-top: 0;
+}
+
+.forgot-password-btn {
+  background-color: var(--orange);
+  font-size: var(--fs-small-size);
+  padding: 0;
+}
+
+.send-email-btn {
+  margin-top: 0;
+}
+
+/*======================= Modal d'oubli de password ==========================*/
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background: var(--beige-light);
+  padding: 2rem;
+  border-radius: 8px;
+  position: relative;
+  width: 90%;
+  max-width: 600px;
+}
+
+.modal-close-icon {
+  color: black;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  border: none;
+  background: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.modal-close::before,
+.modal-close::after {
+  background-color: black !important;
+}
+
+@media screen and (min-width: 768px) {
+  .section__my-profile {
+    padding: 4rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .section__my-profile {
+    padding: 8rem;
+  }
+}

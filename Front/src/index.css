@@ -1,0 +1,368 @@
+/*=================================== RACINE =======================================*/
+@import url("https://fonts.googleapis.com/css2?family=Neonderthaw&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  /*======================= Couleurs ==========================*/
+  --blue-dark: #01204e;
+  --beige-light: #f6dcac;
+  --beige-transparent: #f6dcac7e;
+  --orange-light: #faa968;
+  --orange: #f85525;
+  --red-dark: #ca3b39;
+  /*======================= Polices ==========================*/
+  --font-logo: "Neonderthaw", "Pacifico", cursive;
+  --font-title: "Oswald", "Arial Black", sans-serif;
+  --font-subtitle: "Raleway", "Helvetica Neue", sans-serif;
+  --font-text: "Nunito Sans", "Segoe UI", sans-serif;
+
+  /*======================= Tailles d'écriture ==========================*/
+  --fs-section-title: 3rem;
+  --fs-container-title: 2rem;
+  --fs-subtitle: 1.5rem;
+  --fs-submit-title: 1.4rem;
+  --fs-normal-size: 1.2rem;
+  --fs-small-size: 1rem;
+  --fs-smaller-size: 0.8rem;
+}
+
+/*=================================== PARAMÈTRES GÉNÉRAUX =======================================*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+  margin: auto;
+  font-family: "Nunito Sans", sans-serif;
+  background-image: url("/images/bg-homepage-desktop.webp");
+  color: #2d2d2d;
+  font-size: var(--fs-text-size);
+}
+main {
+  min-height: 100vh;
+  padding-top: 5rem;
+}
+
+a {
+  text-decoration: none;
+}
+img {
+  border-radius: 8px;
+}
+/*======================= Animations ==========================*/
+
+/*Augmente légérement la taille de l'élément*/
+@keyframes pulse-scale {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/*=================================== H1 POUR L'ACCESSIBILITÉ ET LE SEO =======================================*/
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/*=================================== CLASSES RÉUTILISABLES =======================================*/
+
+/*------TITRES------*/
+.section-title {
+  font-family: var(--font-title);
+  text-align: start;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  color: var(--blue-dark);
+  font-size: var(--fs-section-title);
+}
+.container-title {
+  font-family: var(--font-logo);
+  font-size: var(--fs-container-title);
+  color: var(--blue-dark);
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+/*------BOUTONS------*/
+.btn {
+  margin-top: 4rem;
+  padding: 0.5rem;
+  background-color: var(--blue-dark);
+  color: white;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.btn:hover {
+  color: var(--blue-dark);
+  background-color: var(--orange);
+  transform: translateY(-2px);
+}
+
+.button-return-catalog {
+  font-size: var(--fs-normal-size);
+  margin: 4rem 1rem 0rem 1rem;
+}
+
+/*-----------------------FORMULAIRES---------------------*/
+.section__form {
+  padding: 2rem 1rem;
+}
+
+.form-title {
+  padding: 0;
+  text-align: center;
+}
+.form__container {
+  max-width: 800px;
+  margin: auto;
+  padding: 1.5rem;
+  background-color: var(--beige-transparent);
+  border: 1px solid var(--red-dark);
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", sans-serif;
+  color: var(--blue-dark);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: var(--fs-normal-size);
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: var(--blue-dark);
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: var(--fs-normal-size);
+}
+
+textarea {
+  resize: vertical;
+}
+
+/*------Partie ingrédients------*/
+.add-ingredient__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.ingredients-title {
+  font-size: var(--fs-container-title);
+  font-family: var(--font-title);
+
+  text-align: center;
+  margin: 1rem;
+  padding-top: 1rem;
+  border-top: 5px solid var(--red-dark);
+}
+.ingredient-details {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  align-items: end;
+
+  margin-bottom: 2rem;
+}
+.ingredient-details label {
+  margin-bottom: 1rem;
+}
+
+.ingredient-details select {
+  padding: 1rem;
+}
+.ingredient-details {
+  position: relative;
+}
+
+/*------Boutons formulaire------*/
+
+.add-ingredient-btn {
+  margin: auto;
+  background-color: var(--orange);
+  color: var(--blue-dark) !important;
+}
+
+.btn-remove-element {
+  margin: 0.5rem 0;
+  max-width: 100px;
+  font-size: var(--fs-smaller-size) !important;
+}
+.btn-remove-element,
+.add-ingredient-btn {
+  font-size: var(--fs-small-size);
+}
+
+.btn-add-element {
+  margin-top: 0;
+}
+.btn-add-element__container {
+  padding: 0 2rem;
+  width: fit-content;
+  margin: auto;
+}
+
+.form__container button[type="submit"] {
+  font-size: var(--fs-submit-title);
+  margin: 2rem auto 0 auto;
+}
+
+/*------nav-links footer et navbar------*/
+.nav-link {
+  color: white;
+}
+
+.nav-link:hover {
+  color: var(--red-dark);
+}
+
+.section__recipes-block {
+  border-top: 5px solid var(--red-dark);
+}
+
+/*------Pages erreurs------*/
+.error-page {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.btn-error-page {
+  margin: auto;
+  display: block;
+  font-size: var(--fs-container-title);
+  padding-top: 1rem;
+}
+
+.error-image {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 5%;
+}
+
+/*========================== MEDIA QUERIES=====================================*/
+
+/* -------------------- */
+/* TABLET*/
+/* -------------------- */
+
+@media (min-width: 768px) {
+  :root {
+    --fs-section-title: 3rem;
+    --fs-container-title: 2rem;
+    --fs-subtitle: 1.5rem;
+    --fs-normal-size: 1.2rem;
+    --fs-small-size: 1rem;
+  }
+  .section__form {
+    padding: 4rem;
+  }
+
+  .form__container {
+    padding: 2rem;
+  }
+  .ingredient-details {
+    grid-template-columns: 1fr;
+  }
+}
+/* -------------------- */
+/* DESKTOP */
+/* -------------------- */
+@media (min-width: 1000px) {
+  :root {
+    --fs-section-title: 3rem;
+    --fs-container-title: 2.5rem;
+    --fs-subtitle: 2rem;
+    --fs-normal-size: 1.2rem;
+    --fs-small-size: 1.1rem;
+    --fs-smaller-size: 0.9rem;
+  }
+
+  .section-title {
+    padding-bottom: 2rem;
+    padding-left: 0;
+  }
+  .add-ingredient-btn {
+    margin-top: 2rem;
+  }
+  .btn-remove-element {
+    margin: 1rem;
+    position: absolute;
+    right: 0;
+    top: 100px;
+    font-size: var(--fs-small-size);
+  }
+  .ingredient-details {
+    margin-top: 2rem;
+    grid-template-columns: 1fr 1fr 1fr auto;
+  }
+
+  .ingredient-details .form-group {
+    display: flex;
+    justify-content: center;
+    max-width: 220px;
+    text-align: center;
+  }
+
+  [id*="quantity"],
+  [id*="unit"] {
+    max-width: 100%;
+  }
+
+  .form__container {
+    padding: 3rem;
+  }
+}
+/* -------------------- */
+/* BIG SCREENS */
+/* -------------------- */
+
+@media (min-width: 1400px) {
+  :root {
+    --fs-section-title: 3rem;
+    --fs-smaller-size: 1rem;
+  }
+}
+@media (min-width: 1800px) {
+  :root {
+    --fs-section-title: 4rem;
+    --fs-container-title: 2rem;
+    --fs-subtitle: 1.8rem;
+    --fs-submit-title: 1.6rem;
+    --fs-normal-size: 1.5rem;
+    --fs-small-size: 1.3rem;
+    --fs-smaller-size: 1.2rem;
+  }
+}

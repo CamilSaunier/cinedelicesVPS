@@ -1,0 +1,36 @@
+.motions__section {
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.motions__container {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-content: center;
+  padding: 2rem;
+  font-size: var(--fs-container-title);
+}
+.motion__img {
+  width: 100%;
+  aspect-ratio: 2 / 3; /*= format affiche */
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+@media (min-width: 2000px) {
+  .motions__container {
+    grid-template-columns: repeat(5, 1fr);
+    width: 80%;
+    margin: auto;
+  }
+}
+
+@media (min-width: 1400px) {
+  .motions__section {
+    padding: 4rem;
+  }
+}

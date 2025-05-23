@@ -1,0 +1,159 @@
+.section__result {
+  padding: 2rem;
+}
+
+/*----------------PRÉSENTATION DU FILM------------------------*/
+.section__result-motion {
+  display: grid;
+  text-align: center;
+  gap: 1.5rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "titre titre"
+    "img img"
+    "date directeur"
+    "description description"
+    "citation citation";
+  justify-content: center;
+  align-items: center;
+  font-size: var(--fs-normal-size);
+  font-weight: bold;
+}
+
+.motion__picture {
+  grid-area: img;
+
+  width: 100%;
+}
+
+.motion__title {
+  grid-area: titre;
+  text-align: center;
+}
+
+.motion__director {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+  max-height: 100px;
+  grid-area: directeur;
+  text-align: center;
+  font-weight: bold;
+  width: 100%;
+  padding: 1rem 0;
+  border-top: 5px solid #ca3b39;
+  border-bottom: 5px solid #ca3b39;
+}
+.motion__date {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+  font-weight: bold;
+  width: 100%;
+  padding: 1rem 0;
+  border-top: 5px solid #ca3b39;
+  border-bottom: 5px solid #ca3b39;
+  grid-area: date;
+}
+.motion__description {
+  font-weight: bolder;
+  text-align: center;
+  grid-area: description;
+}
+.motion__catchphrase {
+  font-weight: bolder;
+  grid-area: citation;
+}
+
+@media (min-width: 768px) {
+  .section__result-motion {
+    grid-template-columns: 1fr 1fr;
+
+    grid-template-areas:
+      "titre titre"
+      "img description"
+      "img citation"
+      "img date"
+      "img directeur";
+
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .section__result-motion {
+    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-areas:
+      "titre titre titre"
+      "img date directeur"
+      "img description description"
+      " img citation citation";
+    width: 90%;
+    margin: auto;
+
+    gap: 2rem;
+  }
+
+  .motion__picture {
+    width: 90%;
+    margin: auto;
+  }
+  .motion__description {
+    min-height: 200px;
+    padding: 4rem 2rem;
+  }
+}
+
+@media (min-width: 1500px) {
+  .section__result-motion {
+    width: 60%;
+  }
+}
+
+/*----------------RECETTES------------------------*/
+
+.result-title {
+  margin: 4rem 0;
+  text-align: center;
+  padding: 0;
+}
+
+.no-recipes-found-container {
+  font-size: var(--fs-container-title);
+  font-family: var(--font-title);
+  padding: 4rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+.no-recipes-found-text {
+  text-align: center;
+}
+
+.no-recipes-found-btn {
+  font-size: var(--fs-subtitle);
+  background-color: var(--orange);
+  color: var(--dark-blue) !important;
+  padding: 1.5rem;
+  animation: pulse-scale 3s infinite ease-in-out;
+}
+
+@media (min-width: 1200px) {
+  .no-recipes-found-btn {
+    font-size: var(--fs-container-title);
+  }
+}
+
+@media (min-width: 1800px) {
+  .section__result-recipes {
+    padding: 4rem 8rem;
+  }
+}

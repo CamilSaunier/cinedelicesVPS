@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ciné Délices</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+    <link rel="stylesheet" href="/Front/assets/css/reset.css" />
+    <link rel="stylesheet" href="/Front/assets/css/index.css" />
+    <link rel="stylesheet" href="/Front/assets/css/carnet.css">
+    <link rel="stylesheet" href="../css/recipe.css">
+
+    <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+  </head>
+  <body>
+    <!------ HEADER ------>
+
+    <header>
+      <div class="header__branding">
+        <img src="/images/logo.png" alt="Logo" class="header__branding-logo" />
+        <h1 class="header__branding-title">Ciné Délices</h1>
+      </div>
+      <!--------NAVBAR ------> 
+      <nav class="navbar__container">
+        <div class="navbar__items">
+          <img src="/images/logo.png" alt="Logo" class="navbar__logo-mobile" />
+
+          <div class="search-form field">
+            <div class="control">
+              <input class="input" type="text" placeholder="Rechercher une recette" />
+            </div>
+          </div>
+
+          <i class="burger_menu-icon uil uil-bars"></i>
+          <i class="burger_menu-close uil uil-multiply"></i>
+        </div>
+
+        <div class="menu">
+          <ul>
+            <li class="nav-link" href="#">Accueil</a></li>
+            <li class="nav-link" href="#">Catalogue</a></li>
+            <li class="nav-link" href="#">Contact</a></li>
+            <li class="nav-link" id="register"href="#">Connexion</a></li>
+            <li class="nav-link" id="signUp" href="#">Inscription</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+
+    <!----------SECTION FILTRAGE ------------->
+  <main>
+    <section class="section__recipe-book">
+      <h2 class="section-title title has-text-centered">Carnet de recettes</h2>
+      
+      <!-- Filtres -->
+      <div class="dish__category-filters">
+        <div class="dish__category-filter">
+          <h3 class="dish__category-name">Entrée</h3>
+        </div>
+        <div class="dish__category-filter">
+
+          <h3 class="dish__category-name">Plat</h3>
+        </div>     <div class="dish__category-filter">
+          <h3 class="dish__category-name">Dessert</h3>
+        </div>     <div class="dish__category-filter">
+          <h3 class="dish__category-name">Apéritif</h3>
+        </div>     <div class="dish__category-filter">
+          <h3 class="dish__category-name">Petit-dejeuner</h3>
+        </div>
+        <div class="dish__category-filter">
+          <h3 class="dish__category-name">Boissons</h3>
+        </div>
+      </div>
+
+      <!-- Catégories de films -->
+      <div class="container__film-filter">
+        <h2 class="container-title  has-text-centered">Par films ou série</h2>
+        <form action="" >
+          <select name="filmCategory" class="select__category"id="filmCategory">
+            <option value="categorie">Categorie</option>
+            <option value="chihiro">Horreur</option>
+            <option value="chihiro">Animés</option>
+            <option value="chihiro">Comédie</option>
+            <option value="chihiro">Français</option>
+            <option value="chihiro">Science-Fiction</option>
+          </select>
+   
+  
+          </form>
+
+          <div class="film__cards">
+          <!-- Exemple de carte film -->
+ <!-- Swiper -->
+<div class="swiper film__swiper swiper-container">
+  <div class="swiper-wrapper">
+    <!-- Chaque slide -->
+    <div class="swiper-slide film__card">
+      <img src="../img/movies/chihiro.webp" alt="Chihiro" />
+    </div>
+    <div class="swiper-slide film__card">
+      <img src="../img/movies/La_Cite_de_la_peur.jpg" alt="La Cité de la Peur" />
+    </div>
+    <div class="swiper-slide film__card">
+      <img src="../img/movies/ratatouille.jpg" alt="Ratatouille" />
+    </div>
+    <div class="swiper-slide film__card">
+      <img src="../img/movies/starwars.webp" alt="Star Wars" />
+    </div>
+    <div class="swiper-slide film__card">
+      <img src="../img/movies/pulp__fiction.webp" alt="Pulp Fiction" />
+    </div>
+    <div class="swiper-slide film__card">
+      <img src="../img/movies/Kaamelott.jpg" alt="Kaamelott" />
+    </div>
+    <div class="swiper-slide film__card">
+      <img src="../img/movies/Kaamelott.jpg" alt="Kaamelott" />
+    </div>
+
+    <div class="swiper-slide film__card">
+      <img src="../img/movies/Kaamelott.jpg" alt="Kaamelott" />
+    </div>
+
+
+  </div>
+  <div class="swiper-slide film__card see-more-slide">
+    <a class="button__see-more btn"> Voir plus</a>
+  </div>
+ 
+
+  <!-- Pagination + Navigation (optionnel) -->
+
+  <div class="swiper-button-prev custom-prev"></div>
+  <div class="swiper-button-next custom-next"></div>
+</div>
+
+<div class="film__cards-container">
+<div class="film__grid">
+  <div class="film__card">
+    <img src="../img/movies/chihiro.webp" alt="Chihiro" />
+  </div>
+  <div class="film__card">
+    <img src="../img/movies/La_Cite_de_la_peur.jpg" alt="La Cité de la Peur" />
+  </div>
+  <div class="film__card">
+    <img src="../img/movies/ratatouille.jpg" alt="Ratatouille" />
+  </div>
+  <div class="film__card">
+    <img src="../img/movies/starwars.webp" alt="Star Wars" />
+  </div>
+  <div class="film__card">
+    <img src="../img/movies/pulp__fiction.webp" alt="Pulp Fiction" />
+  </div>
+  <div class="film__card">
+    <img src="../img/movies/Kaamelott.jpg" alt="Kaamelott" />
+  </div>
+  <div class="film__card">
+    <img src="../img/movies/Kaamelott.jpg" alt="Kaamelott" />
+  </div>
+
+  <div class="film__card">
+    <img src="../img/movies/Kaamelott.jpg" alt="Kaamelott" />
+  </div>
+
+</div>
+  <a class="button__see-more btn"> Voir plus</a>
+</div>
+
+</div>
+
+</div>
+
+
+
+
+      <!-- Ajouter une recette -->
+      <button class="add-recipe-btn btn">Ajoute ta recette !</button>
+    </section>
+
+    <!----------SECTION RECETTE DU JOUR ------------->
+    <section class="section__today-recipe ">
+
+      <h2 class="section__today-recipe-title ">La recette du jour</h2>
+        <div class="container">
+            <h2 class="section-title title">Ichiraku Ramen</h2>
+            <h2 class="subtitle has-text-centered">Naruto</h2>
+
+            <div class="columns">
+                <div class="column is-half">
+
+                <div class="img-difficulty">
+                    <figure class="image is-128x128">
+                        <img src="../img/recipes/Ishiraku Ramen Naruto.jpg" alt="image-plat-ishiraku-naruto">
+                    </figure>                 
+                    <p class="has-text-centered" id="level_recipe">Facile : 25 minutes</p>
+                 </div>
+            
+                <div class="ingredients">
+                    <h3 class="title is-4">Ingrédients :</h3>
+                    <ul class="text_recipe">
+                        <li>Nouilles de ramen</li>
+                        <li>Bouillon de poulet</li>
+                        <li>Oignons verts</li>
+                        <li>Oeufs</li>
+                        <li>Nori</li>
+                    </ul>
+                </div>
+
+                </div>
+
+                <div class="column is-half">
+                    <div class="anecdote">
+                        <h3 class="title is-4">El famoso ramen comme on dit au Japon !</h3>
+                        <p class="text_recipe">Ah, le fameux ramen de Naruto ! C’est un plat emblématique de la série, surtout associé à l’amour de Naruto Uzumaki pour ce délicieux bol de ramen. Bien que la recette ne soit jamais divulgué on a tenté l’expérience. </p>
+                        
+
+                    </div>
+                   
+                
+                <div class="ingredients">
+                    <h3 class="title is-4">Étapes :</h3>
+                    <p class="text_recipe">1. Faites cuire les nouilles selon les instructions.</p>
+                    <p class="text_recipe">2. Préparez le bouillon de poulet.</p>
+                    <p class="text_recipe">3. Ajoutez les ingrédients et servez chaud.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="button-center">
+              <button class="button">Retourner à l'accueil</button>
+              </div>
+
+   
+    </section>
+    </main>
+         
+
+  <!-- Pied de page -->
+  <footer class="footer ">
+    <div class="content has-text-centered">
+      <img src="/Front/assets/img/logo.png" alt="Logo" class="footer__logo" />
+      <div class="footer__menu">
+        <a class="nav-link" href="#">Accueil</a>
+        <a class="nav-link" href="#">Catalogue</a>
+        <a class="nav-link" href="#">Inscription</a>
+        <a class="nav-link" href="#">Connexion</a>
+        <a class="nav-link" href="#">Contact</a>
+      </div>
+      <p class="mt-2 copyright">© 2025 Ciné Délices. Tous droits réservés.</p>
+    </div>
+  </footer>
+  <!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script src="../js/swiper.js"></script>
+
+
+
+</body>
+</html>

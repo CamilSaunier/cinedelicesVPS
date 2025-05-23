@@ -1,0 +1,89 @@
+/*=================================== IMAGE DE FOND =======================================*/
+
+.bg-home {
+  background-image: url("/images/background-section.webp");
+  background-size: 320px;
+  background-position: center;
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+@media (min-width: 768px) {
+  .bg-home {
+    background-image: none;
+  }
+}
+
+/*=================================== SECTION PRÉSENTATION =======================================*/
+
+.section__presentation {
+  padding: 2rem;
+}
+.section__presentation .box {
+  background-color: var(--blue-dark);
+  border: 5px solid var(--orange);
+  color: white;
+  margin: auto;
+}
+
+.section__presentation-title {
+  font-family: var(--font-title);
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 1.5rem;
+  line-height: 2rem;
+}
+
+.section__presentation-text {
+  font-size: var(--fs-normal-size);
+  line-height: 1.7rem;
+}
+
+.button__catalog {
+  background-color: var(--orange);
+  border-radius: 15px;
+  border: none;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .section__presentation {
+    background-image: url("/images/background-section.webp");
+    z-index: 1000;
+    background-position: center;
+    background-repeat: repeat-y;
+    background-size: 700px;
+    padding: 10rem 2rem;
+  }
+  .section__presentation .box {
+    height: 70%;
+    margin: auto;
+  }
+  .section__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .section__content {
+    background: none;
+  }
+}
+
+@media (min-width: 1400px) {
+  .section__presentation {
+    margin: auto;
+    font-size: 1.5rem;
+  }
+  .section__content {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .section__content p {
+    line-height: 1rem;
+    font-size: var(--fs-normal-size);
+  }
+}

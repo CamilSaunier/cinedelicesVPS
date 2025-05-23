@@ -1,0 +1,203 @@
+.section__recipe-all {
+  padding: 1rem;
+}
+
+/* Cibler chaque premier élément de chaque catégorie */
+.section__recipe-all > div {
+  margin-top: 2rem;
+  border-top: 5px solid var(--red-dark); /* Utilise la couleur que tu veux */
+}
+
+.instruction,
+.anecdote {
+  width: 100%;
+}
+
+/* ========================== MEDIA QUERIES ============================== */
+
+/* -------------------- */
+/* MOBILE-FIRST LAYOUT */
+/* -------------------- */
+
+/* --------Contain all recipe elements except the title------------ */
+.recipe_items {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+    "img level"
+    "anecdote anecdote"
+    "ingredients ingredients"
+    "instruction instruction";
+}
+
+.text_recipe {
+  font-size: var(--fs-normal-size);
+  line-height: 2rem;
+}
+
+.card {
+  padding: 1.5rem;
+  font-weight: 700;
+  background-color: var(--beige-transparent);
+  border-top: 8px solid var(--red-dark) !important;
+  border-radius: 15px;
+}
+
+.card_title {
+  margin-bottom: 2rem;
+  font-size: var(--fs-subtitle);
+  font-weight: bold;
+}
+#recipe_img {
+  width: 100%;
+}
+
+.level_completion-recipe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  font-size: var(--fs-card-title);
+  font-weight: bold;
+  width: 100%;
+  padding: 1rem;
+  border-top: 5px solid #ca3b39;
+  border-bottom: 5px solid #ca3b39;
+}
+
+.ingredients {
+  grid-area: ingredients;
+  border: 1px solid #ca3b39;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.ingredient_items {
+  margin-bottom: 0.5rem;
+}
+
+.instruction {
+  grid-area: instruction;
+  border: 1px solid #ca3b39;
+  margin-top: 20px;
+}
+
+.anecdote {
+  grid-area: anecdote;
+  border-top: 5px solid #ca3b39;
+  border-bottom: 5px solid #ca3b39;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/*======== TABLET (≥ 768px) =========*/
+
+@media (min-width: 768px) {
+  .recipe__container-all {
+    flex-wrap: wrap;
+  }
+  .recipe__container-all {
+    margin: none;
+  }
+  .recipe_items {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "img anecdote"
+      "level level"
+      "ingredients ingredients"
+      "instruction instruction";
+    gap: 2rem;
+  }
+
+  #recipe_img {
+    grid-area: img;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .anecdote {
+    grid-area: anecdote;
+  }
+
+  .level_completion-recipe {
+    grid-area: level;
+  }
+
+  .ingredients {
+    grid-area: ingredients;
+  }
+
+  .instruction {
+    grid-area: instruction;
+  }
+}
+
+/* -------------------- */
+/* DESKTOP (≥ 1000px) */
+/* -------------------- */
+@media (min-width: 1000px) {
+  .section__recipe-all > div {
+    padding: 2rem 0 4rem 0;
+  }
+
+  .recipe__container-all {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .recipe_items {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "img anecdote"
+      "level instruction"
+      "ingredients instruction";
+    gap: 1rem 4rem;
+    width: 90%;
+    margin: auto;
+  }
+
+  #recipe_img {
+    grid-area: img;
+    width: 60%;
+    margin: auto;
+  }
+
+  .level_completion-recipe {
+    grid-area: level;
+    width: 60%;
+    margin: auto;
+  }
+
+  .anecdote {
+    grid-area: anecdote;
+    margin: auto;
+    height: max-content;
+  }
+
+  .ingredients {
+    grid-area: ingredients;
+    width: 60%;
+    margin: auto;
+    height: 100%;
+  }
+
+  .instruction {
+    grid-area: instruction;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (min-width: 1800px) {
+  .section__recipe-all > div {
+    max-width: 80%;
+    margin: auto;
+    padding: 2rem 0 4rem 0;
+  }
+  .recipe__container-all {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

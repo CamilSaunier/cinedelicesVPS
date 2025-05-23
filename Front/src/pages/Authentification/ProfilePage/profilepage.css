@@ -1,0 +1,133 @@
+.section__my-profile {
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: var(--beige-transparent);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  color: var(--blue-dark);
+}
+
+.profile-title {
+  text-align: center;
+}
+
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile-header img {
+  width: 150px;
+}
+
+.profile-overview,
+.profile-form,
+.password-verification {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 500px;
+}
+
+.pseudo-profile,
+.email-profile {
+  background-color: var(--beige-light);
+  text-align: center;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px var(--orange);
+}
+
+.pseudo-profile > strong,
+.email-profile > strong {
+  font-weight: bolder;
+}
+/*====Form de vérification de mot de passe=====*/
+.password-verification {
+  margin: 4rem 0;
+}
+
+/*====Form de modification des infoormations=====*/
+.profile-form [class$="-field"] {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.profile-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.profile-actions .btn {
+  display: block;
+  margin-top: 0;
+}
+
+.profile input {
+  background-color: var(--beige-light);
+  border-radius: 5px;
+  padding: 1rem;
+  border: none;
+  box-shadow: 0 2px 5px var(--orange);
+  min-width: 250px;
+}
+
+/* TABLETTE ET PLUS GRAND */
+@media (min-width: 768px) {
+  .profile {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .profile-header img {
+    width: 350px;
+  }
+
+  .profile-header {
+    flex: 0 0 300px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-overview,
+  .profile-form,
+  .password-verification {
+    max-width: none;
+  }
+
+  .profile-actions {
+    flex-wrap: nowrap;
+  }
+}
+
+@media (min-width: 1000px) {
+  .profile-form {
+    flex-direction: column;
+  }
+  .profile-form input {
+    min-width: 400px;
+  }
+}

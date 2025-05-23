@@ -1,0 +1,44 @@
+{
+  "name": "back",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/crypto.tests.js",
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "db:create": "dotenv -e .env -- bash -c 'psql \"$PG_URL\" -f data/create_tables.sql'",
+    "db:seed": "dotenv -e .env -- bash -c 'psql \"$PG_URL\" -f data/seeding_tables.sql'",
+    "db:reset": "npm run db:create && npm run db:seed",
+    "db:createSQ": "node src/migrations/createTables.js",
+    "db:seedSQ": "node src/migrations/seedTables.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "argon2": "^0.43.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "express-rate-limit": "^7.5.0",
+    "express-xss-sanitizer": "^2.0.0",
+    "izitoast": "^1.4.0",
+    "joi": "^17.13.3",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.2",
+    "nodemailer": "^7.0.3",
+    "pg": "^8.14.1",
+    "sequelize": "^6.37.7",
+    "sharp": "^0.34.1",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "dotenv-cli": "^8.0.0",
+    "eslint": "^9.25.1"
+  }
+}

@@ -1,0 +1,71 @@
+.sidenav {
+  margin-top: -2rem;
+  min-width: 225px;
+  max-width: 2225px;
+  background-color: var(--blue-dark);
+  position: fixed;
+  height: 100%;
+  padding: 2rem 1rem;
+  transition: all 0.5s;
+  left: -225px;
+  z-index: 998;
+}
+
+.sidenav.open {
+  left: 0;
+}
+
+.sidenav.open .toggle-button {
+  top: 10rem;
+  left: 12rem;
+}
+
+.toggle-button {
+  position: fixed;
+  top: 10rem;
+  left: -0.2rem;
+  background-color: var(--blue-dark);
+  color: white;
+  padding: 1rem 0.5rem;
+  cursor: pointer;
+  border-radius: 0 6px 6px 0;
+  font-size: var(--small-size);
+  white-space: nowrap;
+  transition: all 0.5s;
+}
+
+.sidenav-link {
+  font-size: var(--fs-normal-size);
+  font-family: var(--font-title);
+  display: block;
+  padding: 0.5rem;
+  border-radius: 6px;
+  margin: 5rem 0.5rem;
+  color: white;
+  display: block;
+  cursor: pointer;
+}
+
+.sidenav-link:hover,
+.sidenav-link:active {
+  background: var(--red-dark);
+}
+@media (min-width: 768px) {
+  .sidenav {
+    left: 0;
+    top: 0;
+    height: 100%;
+    margin-top: 0;
+  }
+  .sidenav-link {
+    padding: 0.5rem;
+  }
+
+  .toggle-button {
+    display: none;
+  }
+
+  .sidenav.open {
+    left: 0;
+  }
+}

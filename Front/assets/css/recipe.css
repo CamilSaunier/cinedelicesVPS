@@ -1,0 +1,152 @@
+body {
+  background-image: url(../img/fond.png);
+}
+
+h2 {
+  text-align: center;
+  text-align: center;
+}
+
+.button-return-catalog {
+  background-color: #01204e;
+  border-radius: 15px;
+  border: none;
+  color: white;
+  padding: 10px;
+  margin-top: 1rem;
+}
+
+.button-center {
+  display: flex;
+  justify-content: center;
+}
+
+/*========================== MEDIA QUERIES=====================================*/
+
+/* -------------------- */
+/* MOBILE-FIRST LAYOUT */
+/* -------------------- */
+
+/* --------Contain all recipe elements except the title------------ */
+.recipe_items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#recipe_img {
+  width: 50%;
+}
+
+#level_recipe {
+  font-size: 18px;
+  font-weight: bold;
+  width: 40%;
+  border-top: 5px solid #ca3b39;
+  border-bottom: 5px solid #ca3b39;
+}
+
+.ingredients {
+  background-color: rgba(246, 220, 172, 0.7);
+  border: 1px solid #ca3b39;
+  margin-top: 20px;
+  padding: 10px;
+  width: 100%;
+}
+
+.instruction {
+  background-color: rgba(246, 220, 172, 0.7);
+  border: 1px solid #ca3b39;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.text_recipe {
+  font-size: 12px;
+}
+
+.anecdote {
+  background-color: rgba(246, 220, 172, 0.7);
+  border-top: 5px solid #ca3b39;
+  border-bottom: 5px solid #ca3b39;
+  border-radius: 5px;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+/*======== Tablet ==========*/
+
+@media (min-width: 768px) {
+  .recipe_items {
+    margin-left: 1.5rem;
+  }
+
+  #recipe_img {
+    width: 100%;
+    order: 1;
+    overflow: hidden;
+    height: 15em;
+  }
+
+  .anecdote {
+    width: 45%;
+    order: 2;
+  }
+
+  #level_recipe {
+    width: 45%;
+    order: 3;
+  }
+
+  .ingredients {
+    order: 4;
+  }
+
+  .instruction {
+    order: 5;
+    width: 100%;
+  }
+}
+
+/* -------------------- */
+/* DESKTOP */
+/* -------------------- */
+@media (min-width: 1000px) {
+  .recipe_items {
+    flex-direction: column;
+    height: 80vh;
+    width: 100%;
+    margin-right: 0px;
+  }
+
+  #recipe_img {
+    height: 25vh;
+    width: 40vh;
+    order: 1;
+  }
+
+  #level_recipe {
+    height: 5vh;
+    width: 40vh;
+    order: 2;
+  }
+
+  .anecdote {
+    height: 30vh;
+    width: 40vh;
+    order: 4;
+  }
+
+  .ingredients {
+    height: 40vh;
+    width: 40vh;
+    order: 3;
+  }
+
+  .instruction {
+    order: 5;
+    height: 40vh;
+    width: 40vh;
+  }
+}

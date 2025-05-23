@@ -1,0 +1,100 @@
+.section__recipe-book {
+  padding-top: 4rem;
+}
+
+.page-title {
+  font-size: var(--fs-section-title);
+  font-family: var(--font-title);
+  color: var(--blue-dark);
+}
+
+.filter-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  padding: 4rem 1rem;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.line {
+  flex-grow: 1;
+  height: 3px;
+  background-color: var(--blue-dark); /* Choisis) /* Choisis la couleur des traits ici */
+  margin: 0 10px; /* Espace entre les traits et le logo */
+}
+
+.logo {
+  width: 100px; /* Ajuste la taille de ton logo selon tes besoins */
+  height: auto;
+}
+
+/*============ FILM CONTAINER ========*/
+
+.container-title {
+  font-size: var(--fs-section-title);
+}
+.container__film-filter {
+  max-width: 99%;
+  padding-bottom: 4rem;
+  text-align: center;
+}
+
+/*===========BUTTON CREATE YOUR RECIPE=======*/
+
+.add-recipe-btn {
+  display: block;
+  margin: 2rem auto;
+  font-size: var(--fs-subtitle);
+  background-color: var(--red-dark);
+  color: white;
+  padding: 1.5rem;
+  border: 2px solid var(--blue-dark);
+  border-radius: 5px;
+  font-weight: bold;
+  animation: pulse-scale 3s infinite ease-in-out;
+}
+/*===========LAST RECIPES LIGNE DE DÉMARCATION=======*/
+.section__last-recipes-carnet {
+  background-color: var(--beige-transparent);
+  border-top: 5px solid var(--red-dark);
+}
+
+/* -------------------- */
+/*TABLET */
+/* -------------------- */
+
+/* -------------------- */
+/*DESKTOP */
+/* -------------------- */
+@media (min-width: 1000px) {
+  .container__film-filter {
+    margin: auto;
+    text-align: start;
+  }
+}
+/* -------------------- */
+/*DESKTOP BIG SCREENS */
+/* -------------------- */
+@media (min-width: 1200px) {
+  .container__film-filter {
+    gap: 1rem;
+  }
+}
+@media (min-width: 1400px) {
+  .filter-container {
+    width: 80%;
+    margin: auto;
+  }
+
+  .section__last-recipes-carnet {
+    background-color: none;
+  }
+
+  .container__film-filter {
+    width: 100%;
+  }
+}

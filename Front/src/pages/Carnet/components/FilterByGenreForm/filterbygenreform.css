@@ -1,0 +1,17 @@
+.select__category {
+  text-align: center;
+  color: white;
+  background-color: var(--blue-dark);
+  border: none;
+  border-radius: 3px;
+  font-size: var(--fs-normal-size);
+  padding: 0.2rem;
+  height: 3em;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .select__category {
+    max-width: 150px;
+  }
+}

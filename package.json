@@ -1,0 +1,22 @@
+{
+
+  "scripts": {
+
+    "start": "npm run start --prefix Back",
+
+    "start:back": "cd Back && npm run dev",
+
+    "start:front": "cd Front && npm run dev",
+
+    "start:all": "concurrently \"npm run start:back\" \"npm run start:front\""
+
+  },
+
+  "devDependencies": {
+
+    "concurrently": "^9.1.2"
+
+  }
+
+}
+

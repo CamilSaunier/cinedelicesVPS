@@ -1,0 +1,58 @@
+/*=================SWIPER==========*/
+
+.film__swiper {
+  display: block;
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+}
+
+.film__card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.film__card img {
+  max-height: 250px;
+  height: 50%;
+  object-fit: cover;
+}
+
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-paginati {
+  bottom: 0 !important;
+}
+
+.swiper-wrapper {
+  margin-bottom: 2rem;
+}
+.swiper-slide {
+  width: auto !important;
+}
+
+.btn-see-more-motions {
+  margin-top: 0;
+}
+
+@media (min-width: 768px) {
+  .film__card img {
+    max-height: 250px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .film__card img {
+    min-width: 250px;
+    min-height: 300px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .film__card img {
+    min-width: 300px;
+    min-height: 400px;
+  }
+}
