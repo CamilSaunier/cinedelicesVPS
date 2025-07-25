@@ -25,10 +25,9 @@ const DeleteUser = () => {
       } catch (error) {
         handleError(error);
       }
-    };
+    }
     loadUsers();
-  }),
-    [];
+  },[]);
   // ----------------- Formulaire de suppression d'user-----------------
   //fonction qui gère l'envoi du formulaire de suppression d'un utilisateur
 

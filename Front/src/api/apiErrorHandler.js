@@ -16,7 +16,7 @@ export function useErrorHandler() {
     const statusCode = error.response?.status || error.status || error.statusCode || 500;
 
     if (error instanceof Error && statusCode === 500) {
-      showBoundary(error); // maintenant ta page 500 s'affiche !
+      showBoundary(error); 
     }
   };
 

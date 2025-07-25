@@ -12,9 +12,6 @@ import IsAuthed from "./IsAuthed/IsAuthed.jsx";
 import { getRecipes } from "./api/index.js";
 //Error Handler
 import { useErrorHandler } from "./api/apiErrorHandler.js";
-// Import des partials
-import Header from "./component/Partials/Header/Header.jsx";
-import Footer from "./component/Partials/Footer/Footer.jsx";
 //Import des pages
 import Home from "./pages/HomePage/homePage.jsx";
 import Carnet from "./pages/Carnet/Carnet.jsx";
@@ -64,8 +61,6 @@ function App() {
     //si il trouve bien un token, alors il le décode, pour avoir accès à ses propriétés définies en back
     if (token) {
       try {
-        //On les envoie vers le store pour qu'il set le user si ce n'était pas déjà fait
-        // dans la mesure ou le token est dans le locale storage et que sa validité est définit sur 1Jours
         // si on recharge la page on conserve le token
         login(token);
       } catch (err) {

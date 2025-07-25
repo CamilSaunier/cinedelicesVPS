@@ -20,7 +20,7 @@ const RecipeCard = ({ recipe, motion }) => {
           <article className="recipe__card-description">
             <h3 className="recipe__card-title"> {recipe.title} </h3>
 
-            <h4 className="recipe__card-motion"> {motion} </h4>
+            <h4 className="recipe__card-motion"> {typeof motion === "object" && motion !== null ? motion.title : motion} </h4>
             <p> {recipe.description} </p>
           </article>
         </div>

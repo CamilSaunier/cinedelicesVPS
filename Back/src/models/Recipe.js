@@ -72,7 +72,7 @@ Recipe.init(
 );
 
 //on utilise un 'Hook de Sequelize.
-//ici : beforDestroy qui permet realisé la fonction a la supression d'une instance de Recipe
+//ici : beforDestroy qui permet de realiser la fonction a la supression d'une instance de Recipe
 Recipe.beforeDestroy(async (recipe) => {
   // si il y a une picture associé a la recipe alors:
   if (recipe.picture) {

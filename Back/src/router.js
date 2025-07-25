@@ -57,8 +57,8 @@ router.get("/genres", genreController.getAllGenres);
 
 router.post("/user/register", validate(createUserSchema), userController.createOneUser);
 router.post("/refresh-token", userController.generateRefreshToken); //Permet de créer un nouvel access token si le refresh token existe toujours dans les cookies
-router.post("/user/login", validate(loginUserSchema), userController.login);
-router.post("/user/verify", isAuthenticated, validate(verifyUserSchema), userController.VerifyUser);
+router.post("/user/login", limiter,validate(loginUserSchema),  userController.login);
+router.post("/user/verify", limiter,isAuthenticated, validate(verifyUserSchema), userController.VerifyUser);
 router.post("/user/logout", userController.logout); // on nettoie le cookie côté client donc pas besoin de middleware IsAuthenticated ici
 router.post("/user/forgotPassword", validate(forgotPasswordSchema), userController.forgotPassword);
 router.post("/user/resetPassword/:token", validate(resetUserPasswordSchema), userController.resetPassword);

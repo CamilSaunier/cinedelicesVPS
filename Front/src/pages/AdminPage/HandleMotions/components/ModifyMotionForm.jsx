@@ -210,9 +210,11 @@ const ModifyMotionForm = ({ motionsList }) => {
           <input type="file" id="picture" name="picture" accept="image/*" onChange={(e) => setImage(e.target.files[0])} />
         </div>
 
-        <figure id="motion_img">
-          <img src={`${API_URL}/${image}`} alt={title} />
-        </figure>
+        {image && (
+  <figure id="motion_img">
+    <img src={`${API_URL}/${image}`} alt={title} />
+  </figure>
+)}
 
         <button type="submit" className="btn">
           Valider les modifications

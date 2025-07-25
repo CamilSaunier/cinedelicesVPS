@@ -14,7 +14,6 @@ import { FaPowerOff } from "react-icons/fa";
 import { IoIosArrowForward } from "react-icons/io";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
-import { useErrorHandler } from "../../../api/apiErrorHandler.js";
 
 /**
  * Composant Header du site.
@@ -25,12 +24,6 @@ import { useErrorHandler } from "../../../api/apiErrorHandler.js";
  */
 
 const Header = () => {
-  // ----------------- HOOK D'ERREUR-----------------
-  /**
-   * @hook
-   * hook pour la gestion d'erreur
-   */
-  const handleError = useErrorHandler(); // Hook de gestion d'erreurs
   // ----------------- GESTION DU MENU BURGER-----------------
   /**
    * État local qui gère l’ouverture/fermeture du menu burger.
@@ -81,7 +74,7 @@ const Header = () => {
       await logoutUser();
       logout();
     } catch (error) {
-      handleError(error);
+      console.error("Erreur lors de la déconnexion :", error);
     }
     navigate("/");
   };
@@ -98,11 +91,17 @@ const Header = () => {
     e.preventDefault();
 
     try {
-      const foundRecipes = await getRecipeBySearch(search);
+      const foundRecipes = await getRecipeBySearch(search.toLowerCase());
+
       // Si foundRecipes est falsy (ex: null), on envoie un tableau vide
-      navigate("/search-results", { state: { filteredRecipes: foundRecipes || [] } });
+      navigate("/search-results", {
+        state: {
+          filteredRecipes: foundRecipes || [],
+          motion: foundRecipes.map((recipe) => recipe.motion.title),
+        },
+      });
     } catch (error) {
-      handleError(error);
+      console.error("Erreur lors de la recherche de recettes :", error);
       // En cas d'erreur (ex: API down), on navigue quand même avec un tableau vide
       navigate("/search-results", { state: { filteredRecipes: [] } });
     }

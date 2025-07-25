@@ -38,7 +38,7 @@ const Recipe = () => {
 
   // ==================== GESTION DU CHARGEMENT ====================
   if (isLoading) {
-    return <div className="loader">Chargement de la recette...</div>; // Ou ton propre composant de loader
+    return <div className="loader"></div>;
   }
 
   // ==================== GESTION ERREUR / 404 ====================
@@ -73,6 +73,7 @@ const Recipe = () => {
 
           <div className="anecdote card" data-aos="fade-down">
             <h3 className="card_title">{recipe.title}</h3>
+
             <p className="text_recipe">{recipe.description}</p>
           </div>
 

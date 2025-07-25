@@ -5,7 +5,7 @@
  * @param {Function} next
  */
 export function canModifySelf(req, res, next) {
-  console.log("je suis dans le middleware canmodifyself");
+
   // Sécurité : on vérifie que req.user et userId existent bien
   if (!req.user?.userId) {
     const error = new Error("Unauthorized"); // on crée une nouvelle erreur
