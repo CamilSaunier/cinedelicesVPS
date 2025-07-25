@@ -8,7 +8,7 @@ import cookieParser from "cookie-parser";
 import { swaggerUi, swaggerSpec } from "./docs/swagger/swagger.js";
 
 const app = express(); // On crée une instance d'Express
-app.set("trust proxy", true); //Indique a express que ton app est derrière un proxy, ce qui est le cas sur render et perment l'envoi des cookies meme sur les navigateur sécurisé
+app.set("trust proxy", 1); //Indique a express que ton app est derrière un proxy, ce qui est le cas sur render et perment l'envoi des cookies meme sur les navigateur sécurisé
 
 app.use(cookieParser()); // Le middleware pour parser les cookies
 
